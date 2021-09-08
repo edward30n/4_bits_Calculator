@@ -1,0 +1,71 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+-------------------------------------
+ENTITY SUM_tb IS
+END ENTITY SUM_tb;
+-------------------------------------
+ARCHITECTURE testbench OF SUM_tb IS
+--	SIGNAL	clk_tb							:	STD_LOGIC := '0';
+--	SIGNAL	rst_tb							:	STD_LOGIC := '1';
+
+  SIGNAL	num_A_tb  						: 	STD_LOGIC_VECTOR(7 DOWNTO 0);
+  SIGNAL	num_B_tb  						: 	STD_LOGIC_VECTOR(7 DOWNTO 0);
+  SIGNAL	result_tb  						: 	STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+BEGIN
+  --CLOCK GENERATION:------------------------
+	--clk_tb <= not clk_tb after 10ns; -- 50MHz clock generation
+	--RESET GENERATION:------------------------
+	--rst_tb <= '0' after 150ns;
+
+  DUT:	ENTITY work.SUM
+	PORT MAP(	num_A	=>	num_A_tb,
+			num_B 	=>	num_B_tb,
+			result =>	result_tb);
+
+      --Input signal generation
+	signal_generation: PROCESS
+	BEGIN
+
+  -- TEST VECTOR 1
+  num_A_tb <= "00000000";
+  num_B_tb <= "00000001";
+  WAIT FOR 200 ns;
+  -- TEST VECTOR 2
+  num_A_tb <= "00000010";
+  num_B_tb <= "00000010";
+  WAIT FOR 200 ns;
+ -- TEST VECTOR 3
+  num_A_tb <= "00001001";
+  num_B_tb <= "00001001";
+  WAIT FOR 200 ns;
+ -- TEST VECTOR 4
+  num_A_tb <= "00001001";
+  num_B_tb <= "00000001";
+  WAIT FOR 200 ns;
+ -- TEST VECTOR 5
+  num_A_tb <= "00001000";
+  num_B_tb <= "00001000";
+  WAIT FOR 200 ns;
+ -- TEST VECTOR 6
+  num_A_tb <= "00000111";
+  num_B_tb <= "00000111";
+  WAIT FOR 200 ns;
+ -- TEST VECTOR 7
+  num_A_tb <= "00000111";
+  num_B_tb <= "00000010";
+  WAIT FOR 200 ns;
+ -- TEST VECTOR 8
+  num_A_tb <= "00000101";
+  num_B_tb <= "00000111";
+  WAIT FOR 200 ns;
+ -- TEST VECTOR 9
+  num_A_tb <= "00000111";
+  num_B_tb <= "00000110";
+  WAIT FOR 200 ns;
+ -- TEST VECTOR 10
+  num_A_tb <= "00000000";
+  num_B_tb <= "00000000";
+  WAIT FOR 200 ns;
+END PROCESS signal_generation;
+END ARCHITECTURE testbench;
