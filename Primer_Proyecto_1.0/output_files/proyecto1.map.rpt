@@ -1,0 +1,406 @@
+Analysis & Synthesis report for proyecto1
+Tue Sep 07 19:52:20 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "DEC_TO_7SEG:DECIMAL_7SEG_4"
+ 11. Port Connectivity Checks: "DEC_TO_7SEG:DECIMAL_7SEG_3"
+ 12. Port Connectivity Checks: "DEC_TO_7SEG:DECIMAL_7SEG_1"
+ 13. Port Connectivity Checks: "BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT:FUNDAMENTAL_BIT_5_TO_8"
+ 14. Port Connectivity Checks: "SUM:SUM_AND_2_3"
+ 15. Port Connectivity Checks: "SUM:SUM_AND_0_1"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Sep 07 19:52:20 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; proyecto1                                       ;
+; Top-level Entity Name              ; proyecto1                                       ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 137                                             ;
+;     Total combinational functions  ; 137                                             ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 38                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; proyecto1          ; proyecto1          ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; proyecto1.vhd                    ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/proyecto1.vhd           ;         ;
+; DET_ERROR.vhd                    ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/DET_ERROR.vhd           ;         ;
+; COMPLEMENT_A2.vhd                ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/COMPLEMENT_A2.vhd       ;         ;
+; SUM.vhd                          ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/SUM.vhd                 ;         ;
+; DET.vhd                          ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/DET.vhd                 ;         ;
+; COMPLEMENT_A2_8BITS.vhd          ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/COMPLEMENT_A2_8BITS.vhd ;         ;
+; FUNDAMENTAL_BIT.vhd              ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/FUNDAMENTAL_BIT.vhd     ;         ;
+; SUM_FUNDAMENTAL_BIT.vhd          ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/SUM_FUNDAMENTAL_BIT.vhd ;         ;
+; RESTA.vhd                        ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/RESTA.vhd               ;         ;
+; DECENAS_TO_UNIDADES.vhd          ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/DECENAS_TO_UNIDADES.vhd ;         ;
+; BINARY_TO_DECIMAL.vhd            ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/BINARY_TO_DECIMAL.vhd   ;         ;
+; DEC_TO_7SEG.vhd                  ; yes             ; User VHDL File  ; G:/Registro clases/4 semestre materias/Diseño de sistemas digitales/Diseños/Primer_Proyecto_1.0/DEC_TO_7SEG.vhd         ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 137               ;
+;                                             ;                   ;
+; Total combinational functions               ; 137               ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 105               ;
+;     -- 3 input functions                    ; 25                ;
+;     -- <=2 input functions                  ; 7                 ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 137               ;
+;     -- arithmetic mode                      ; 0                 ;
+;                                             ;                   ;
+; Total registers                             ; 0                 ;
+;     -- Dedicated logic registers            ; 0                 ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 38                ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+; Maximum fan-out node                        ; select_mult~input ;
+; Maximum fan-out                             ; 21                ;
+; Total fan-out                               ; 575               ;
+; Average fan-out                             ; 2.70              ;
++---------------------------------------------+-------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                         ;
++--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
++--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
+; |proyecto1                                       ; 137 (5)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |proyecto1                                                                                    ; work         ;
+;    |BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL| ; 35 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL                                        ; work         ;
+;       |DECENAS_TO_UNIDADES:DET_DECENAS|          ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|DECENAS_TO_UNIDADES:DET_DECENAS        ; work         ;
+;       |FUNDAMENTAL_BIT:BIT_FUNDAMENTALES|        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT:BIT_FUNDAMENTALES      ; work         ;
+;       |FUNDAMENTAL_BIT:FUNDAMENTAL_BIT_1_TO_4|   ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT:FUNDAMENTAL_BIT_1_TO_4 ; work         ;
+;       |RESTA:DECENAS_A_UNIDADES|                 ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|RESTA:DECENAS_A_UNIDADES               ; work         ;
+;       |SUM_FUNDAMENTAL_BIT:SUM_BLOCK|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|SUM_FUNDAMENTAL_BIT:SUM_BLOCK          ; work         ;
+;    |COMPLEMENT_A2:COMPLEMENT_A2_4BITS|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|COMPLEMENT_A2:COMPLEMENT_A2_4BITS                                                  ; work         ;
+;    |COMPLEMENT_A2_8BITS:COMPLEMENT_A2_8BTIS|     ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|COMPLEMENT_A2_8BITS:COMPLEMENT_A2_8BTIS                                            ; work         ;
+;    |DEC_TO_7SEG:DECIMAL_7SEG_1|                  ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|DEC_TO_7SEG:DECIMAL_7SEG_1                                                         ; work         ;
+;    |DEC_TO_7SEG:DECIMAL_7SEG_2|                  ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|DEC_TO_7SEG:DECIMAL_7SEG_2                                                         ; work         ;
+;    |DEC_TO_7SEG:DECIMAL_7SEG_3|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|DEC_TO_7SEG:DECIMAL_7SEG_3                                                         ; work         ;
+;    |DEC_TO_7SEG:DECIMAL_7SEG_4|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|DEC_TO_7SEG:DECIMAL_7SEG_4                                                         ; work         ;
+;    |DET:DET_SUM_OR_MULT|                         ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|DET:DET_SUM_OR_MULT                                                                ; work         ;
+;    |DET_ERROR:DET_ERROR_1|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|DET_ERROR:DET_ERROR_1                                                              ; work         ;
+;    |SUM:SUM_AND_0_1|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|SUM:SUM_AND_0_1                                                                    ; work         ;
+;    |SUM:SUM_AND_2_3|                             ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|SUM:SUM_AND_2_3                                                                    ; work         ;
+;    |SUM:SUM_END|                                 ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proyecto1|SUM:SUM_END                                                                        ; work         ;
++--------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |proyecto1|DEC_TO_7SEG:DECIMAL_7SEG_2|proces[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |proyecto1|DET:DET_SUM_OR_MULT|sal_2[6]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "DEC_TO_7SEG:DECIMAL_7SEG_4" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; negativo ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "DEC_TO_7SEG:DECIMAL_7SEG_3" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; negativo ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "DEC_TO_7SEG:DECIMAL_7SEG_1" ;
++----------+-------+----------+--------------------------+
+; Port     ; Type  ; Severity ; Details                  ;
++----------+-------+----------+--------------------------+
+; negativo ; Input ; Info     ; Stuck at GND             ;
++----------+-------+----------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT:FUNDAMENTAL_BIT_5_TO_8" ;
++--------+-------+----------+------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------+
+; num[3] ; Input ; Info     ; Stuck at GND                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "SUM:SUM_AND_2_3"   ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; num_a[7..6] ; Input ; Info     ; Stuck at GND ;
+; num_a[1..0] ; Input ; Info     ; Stuck at GND ;
+; num_b[2..0] ; Input ; Info     ; Stuck at GND ;
+; num_b[7]    ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "SUM:SUM_AND_0_1"   ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; num_a[7..4] ; Input ; Info     ; Stuck at GND ;
+; num_b[7..5] ; Input ; Info     ; Stuck at GND ;
+; num_b[0]    ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Sep 07 19:52:18 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proyecto1 -c proyecto1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file proyecto1.vhd
+    Info (12022): Found design unit 1: proyecto1-gateLevel
+    Info (12023): Found entity 1: proyecto1
+Info (12021): Found 2 design units, including 1 entities, in source file det_error.vhd
+    Info (12022): Found design unit 1: DET_ERROR-gateLevel
+    Info (12023): Found entity 1: DET_ERROR
+Info (12021): Found 2 design units, including 1 entities, in source file complement_a2.vhd
+    Info (12022): Found design unit 1: COMPLEMENT_A2-gateLevel
+    Info (12023): Found entity 1: COMPLEMENT_A2
+Info (12021): Found 2 design units, including 1 entities, in source file sum.vhd
+    Info (12022): Found design unit 1: SUM-gateLevel
+    Info (12023): Found entity 1: SUM
+Info (12021): Found 2 design units, including 1 entities, in source file det.vhd
+    Info (12022): Found design unit 1: DET-gateLevel
+    Info (12023): Found entity 1: DET
+Info (12021): Found 2 design units, including 1 entities, in source file complement_a2_8bits.vhd
+    Info (12022): Found design unit 1: COMPLEMENT_A2_8BITS-gateLevel
+    Info (12023): Found entity 1: COMPLEMENT_A2_8BITS
+Info (12021): Found 2 design units, including 1 entities, in source file fundamental_bit.vhd
+    Info (12022): Found design unit 1: FUNDAMENTAL_BIT-gateLevel
+    Info (12023): Found entity 1: FUNDAMENTAL_BIT
+Info (12021): Found 2 design units, including 1 entities, in source file sum_fundamental_bit.vhd
+    Info (12022): Found design unit 1: SUM_FUNDAMENTAL_BIT-gateLevel
+    Info (12023): Found entity 1: SUM_FUNDAMENTAL_BIT
+Info (12021): Found 2 design units, including 1 entities, in source file resta.vhd
+    Info (12022): Found design unit 1: RESTA-gateLevel
+    Info (12023): Found entity 1: RESTA
+Info (12021): Found 2 design units, including 1 entities, in source file decenas_to_unidades.vhd
+    Info (12022): Found design unit 1: DECENAS_TO_UNIDADES-gateLevel
+    Info (12023): Found entity 1: DECENAS_TO_UNIDADES
+Info (12021): Found 2 design units, including 1 entities, in source file binary_to_decimal.vhd
+    Info (12022): Found design unit 1: BINARY_TO_DECIMAL-gateLevel
+    Info (12023): Found entity 1: BINARY_TO_DECIMAL
+Info (12021): Found 2 design units, including 1 entities, in source file dec_to_7seg.vhd
+    Info (12022): Found design unit 1: DEC_TO_7SEG-behaviour
+    Info (12023): Found entity 1: DEC_TO_7SEG
+Info (12127): Elaborating entity "proyecto1" for the top level hierarchy
+Info (12128): Elaborating entity "DET_ERROR" for hierarchy "DET_ERROR:DET_ERROR_1"
+Info (12128): Elaborating entity "COMPLEMENT_A2" for hierarchy "COMPLEMENT_A2:COMPLEMENT_A2_4BITS"
+Info (12128): Elaborating entity "SUM" for hierarchy "SUM:SUM_AND_0_1"
+Info (12128): Elaborating entity "DET" for hierarchy "DET:DET_SUM_OR_MULT"
+Info (12128): Elaborating entity "COMPLEMENT_A2_8BITS" for hierarchy "COMPLEMENT_A2_8BITS:COMPLEMENT_A2_8BTIS"
+Info (12128): Elaborating entity "BINARY_TO_DECIMAL" for hierarchy "BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL"
+Info (12128): Elaborating entity "FUNDAMENTAL_BIT" for hierarchy "BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT:FUNDAMENTAL_BIT_1_TO_4"
+Info (12128): Elaborating entity "SUM_FUNDAMENTAL_BIT" for hierarchy "BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|SUM_FUNDAMENTAL_BIT:SUM_BLOCK"
+Info (12128): Elaborating entity "RESTA" for hierarchy "BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|RESTA:DECENAS_A_UNIDADES"
+Info (12128): Elaborating entity "DECENAS_TO_UNIDADES" for hierarchy "BINARY_TO_DECIMAL:CONVERT_BINARY_TO_DECIMAL|DECENAS_TO_UNIDADES:DET_DECENAS"
+Info (12128): Elaborating entity "DEC_TO_7SEG" for hierarchy "DEC_TO_7SEG:DECIMAL_7SEG_1"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 175 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 137 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4623 megabytes
+    Info: Processing ended: Tue Sep 07 19:52:20 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

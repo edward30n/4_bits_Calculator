@@ -1,0 +1,896 @@
+$comment
+	File created using the following command:
+		vcd file proyecto1.msim.vcd -direction
+$end
+$date
+	Fri Sep 03 23:16:26 2021
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module proyecto1_vlg_vec_tst $end
+$var reg 4 ! num_1 [3:0] $end
+$var reg 4 " num_2 [3:0] $end
+$var reg 1 # select_mult $end
+$var reg 1 $ select_sum $end
+$var wire 1 % segmento1 [6] $end
+$var wire 1 & segmento1 [5] $end
+$var wire 1 ' segmento1 [4] $end
+$var wire 1 ( segmento1 [3] $end
+$var wire 1 ) segmento1 [2] $end
+$var wire 1 * segmento1 [1] $end
+$var wire 1 + segmento1 [0] $end
+$var wire 1 , segmento2 [6] $end
+$var wire 1 - segmento2 [5] $end
+$var wire 1 . segmento2 [4] $end
+$var wire 1 / segmento2 [3] $end
+$var wire 1 0 segmento2 [2] $end
+$var wire 1 1 segmento2 [1] $end
+$var wire 1 2 segmento2 [0] $end
+$var wire 1 3 segmento3 [6] $end
+$var wire 1 4 segmento3 [5] $end
+$var wire 1 5 segmento3 [4] $end
+$var wire 1 6 segmento3 [3] $end
+$var wire 1 7 segmento3 [2] $end
+$var wire 1 8 segmento3 [1] $end
+$var wire 1 9 segmento3 [0] $end
+$var wire 1 : segmento4 [6] $end
+$var wire 1 ; segmento4 [5] $end
+$var wire 1 < segmento4 [4] $end
+$var wire 1 = segmento4 [3] $end
+$var wire 1 > segmento4 [2] $end
+$var wire 1 ? segmento4 [1] $end
+$var wire 1 @ segmento4 [0] $end
+$var wire 1 A sampler $end
+$scope module i1 $end
+$var wire 1 B gnd $end
+$var wire 1 C vcc $end
+$var wire 1 D unknown $end
+$var tri1 1 E devclrn $end
+$var tri1 1 F devpor $end
+$var tri1 1 G devoe $end
+$var wire 1 H DET_SUM_OR_MULT|sal_2[1]~0_combout $end
+$var wire 1 I SUM_END|result[2]~1_combout $end
+$var wire 1 J SUM_AND_2_3|result~0_combout $end
+$var wire 1 K SUM_END|result[3]~2_combout $end
+$var wire 1 L COMPLEMENT_A2_8BTIS|num_A1[3]~0_combout $end
+$var wire 1 M DET_SUM_OR_MULT|sal_1[4]~2_combout $end
+$var wire 1 N SUM_AND_2_3|result[5]~2_combout $end
+$var wire 1 O mult_AND_3[6]~0_combout $end
+$var wire 1 P CONVERT_BINARY_TO_DECIMAL|DET_DECENAS|Mux3~0_combout $end
+$var wire 1 Q DECIMAL_7SEG_2|proces[0]~3_combout $end
+$var wire 1 R DECIMAL_7SEG_2|proces[1]~5_combout $end
+$var wire 1 S DECIMAL_7SEG_2|proces[1]~6_combout $end
+$var wire 1 T CONVERT_BINARY_TO_DECIMAL|DET_DECENAS|Mux1~0_combout $end
+$var wire 1 U segmento1[0]~output_o $end
+$var wire 1 V segmento1[1]~output_o $end
+$var wire 1 W segmento1[2]~output_o $end
+$var wire 1 X segmento1[3]~output_o $end
+$var wire 1 Y segmento1[4]~output_o $end
+$var wire 1 Z segmento1[5]~output_o $end
+$var wire 1 [ segmento1[6]~output_o $end
+$var wire 1 \ segmento2[0]~output_o $end
+$var wire 1 ] segmento2[1]~output_o $end
+$var wire 1 ^ segmento2[2]~output_o $end
+$var wire 1 _ segmento2[3]~output_o $end
+$var wire 1 ` segmento2[4]~output_o $end
+$var wire 1 a segmento2[5]~output_o $end
+$var wire 1 b segmento2[6]~output_o $end
+$var wire 1 c segmento3[0]~output_o $end
+$var wire 1 d segmento3[1]~output_o $end
+$var wire 1 e segmento3[2]~output_o $end
+$var wire 1 f segmento3[3]~output_o $end
+$var wire 1 g segmento3[4]~output_o $end
+$var wire 1 h segmento3[5]~output_o $end
+$var wire 1 i segmento3[6]~output_o $end
+$var wire 1 j segmento4[0]~output_o $end
+$var wire 1 k segmento4[1]~output_o $end
+$var wire 1 l segmento4[2]~output_o $end
+$var wire 1 m segmento4[3]~output_o $end
+$var wire 1 n segmento4[4]~output_o $end
+$var wire 1 o segmento4[5]~output_o $end
+$var wire 1 p segmento4[6]~output_o $end
+$var wire 1 q num_2[1]~input_o $end
+$var wire 1 r num_2[2]~input_o $end
+$var wire 1 s num_1[2]~input_o $end
+$var wire 1 t num_1[3]~input_o $end
+$var wire 1 u num_1[1]~input_o $end
+$var wire 1 v DET_ERROR|error~0_combout $end
+$var wire 1 w DECIMAL_7SEG_2|proces[0]~0_combout $end
+$var wire 1 x num_1[0]~input_o $end
+$var wire 1 y select_mult~input_o $end
+$var wire 1 z SUM_AND_0_1|result~0_combout $end
+$var wire 1 { DET_SUM_OR_MULT|sal_1[1]~0_combout $end
+$var wire 1 | COMPLEMENT_A2_8BTIS|num_neg~0_combout $end
+$var wire 1 } num_2[3]~input_o $end
+$var wire 1 ~ select_sum~input_o $end
+$var wire 1 !! COMPLEMENT_A2_4BITS|carry_sum[1]~0_combout $end
+$var wire 1 "! DET_SUM_OR_MULT|sal_2[5]~1_combout $end
+$var wire 1 #! mult_AND_2[5]~0_combout $end
+$var wire 1 $! num_2[0]~input_o $end
+$var wire 1 %! SUM_AND_2_3|carry~10_combout $end
+$var wire 1 &! SUM_AND_2_3|carry[4]~11_combout $end
+$var wire 1 '! SUM_AND_2_3|carry[4]~12_combout $end
+$var wire 1 (! SUM_AND_2_3|carry[5]~13_combout $end
+$var wire 1 )! SUM_AND_2_3|carry[5]~14_combout $end
+$var wire 1 *! DET_SUM_OR_MULT|sal_2[6]~8_combout $end
+$var wire 1 +! DET_SUM_OR_MULT|sal_2[5]~7_combout $end
+$var wire 1 ,! SUM_AND_0_1|carry~12_combout $end
+$var wire 1 -! SUM_AND_0_1|carry[2]~13_combout $end
+$var wire 1 .! SUM_AND_0_1|carry[2]~14_combout $end
+$var wire 1 /! mult_AND_0[3]~0_combout $end
+$var wire 1 0! SUM_AND_0_1|carry[3]~15_combout $end
+$var wire 1 1! SUM_AND_0_1|carry[3]~16_combout $end
+$var wire 1 2! SUM_AND_0_1|carry~17_combout $end
+$var wire 1 3! SUM_END|carry~18_combout $end
+$var wire 1 4! SUM_AND_2_3|result[4]~1_combout $end
+$var wire 1 5! DET_SUM_OR_MULT|sal_2[4]~6_combout $end
+$var wire 1 6! SUM_AND_0_1|result[2]~1_combout $end
+$var wire 1 7! DET_SUM_OR_MULT|sal_1[2]~1_combout $end
+$var wire 1 8! SUM_END|carry~14_combout $end
+$var wire 1 9! SUM_END|carry~12_combout $end
+$var wire 1 :! SUM_END|carry[1]~13_combout $end
+$var wire 1 ;! DET_SUM_OR_MULT|sal_2[2]~2_combout $end
+$var wire 1 <! DET_SUM_OR_MULT|sal_2[2]~3_combout $end
+$var wire 1 =! SUM_END|carry[2]~15_combout $end
+$var wire 1 >! SUM_END|carry[3]~16_combout $end
+$var wire 1 ?! DET_SUM_OR_MULT|sal_2[3]~4_combout $end
+$var wire 1 @! DET_SUM_OR_MULT|sal_2[3]~5_combout $end
+$var wire 1 A! SUM_END|carry[3]~17_combout $end
+$var wire 1 B! SUM_END|carry[4]~19_combout $end
+$var wire 1 C! SUM_END|carry[5]~20_combout $end
+$var wire 1 D! SUM_END|carry[5]~21_combout $end
+$var wire 1 E! DET_SUM_OR_MULT|sal_1[5]~3_combout $end
+$var wire 1 F! SUM_END|result[0]~0_combout $end
+$var wire 1 G! COMPLEMENT_A2_8BTIS|num_neg[3]~3_combout $end
+$var wire 1 H! COMPLEMENT_A2_8BTIS|num_neg[2]~2_combout $end
+$var wire 1 I! SUM_END|result[4]~3_combout $end
+$var wire 1 J! COMPLEMENT_A2_8BTIS|num_neg[4]~4_combout $end
+$var wire 1 K! CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT_1_TO_4|Mux0~0_combout $end
+$var wire 1 L! SUM_END|result[5]~4_combout $end
+$var wire 1 M! COMPLEMENT_A2_8BTIS|num_neg[6]~5_combout $end
+$var wire 1 N! COMPLEMENT_A2_8BTIS|num_neg[5]~6_combout $end
+$var wire 1 O! CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT_5_TO_8|Mux0~0_combout $end
+$var wire 1 P! CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT_1_TO_4|Mux3~0_combout $end
+$var wire 1 Q! CONVERT_BINARY_TO_DECIMAL|SUM_BLOCK|result~0_combout $end
+$var wire 1 R! CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT_1_TO_4|Mux1~0_combout $end
+$var wire 1 S! CONVERT_BINARY_TO_DECIMAL|FUNDAMENTAL_BIT_1_TO_4|Mux2~0_combout $end
+$var wire 1 T! CONVERT_BINARY_TO_DECIMAL|SUM_BLOCK|result~1_combout $end
+$var wire 1 U! CONVERT_BINARY_TO_DECIMAL|BIT_FUNDAMENTALES|Mux0~0_combout $end
+$var wire 1 V! DECIMAL_7SEG_1|proces[1]~2_combout $end
+$var wire 1 W! CONVERT_BINARY_TO_DECIMAL|BIT_FUNDAMENTALES|Mux1~0_combout $end
+$var wire 1 X! DECIMAL_7SEG_1|proces[3]~4_combout $end
+$var wire 1 Y! DECIMAL_7SEG_1|proces[0]~5_combout $end
+$var wire 1 Z! CONVERT_BINARY_TO_DECIMAL|BIT_FUNDAMENTALES|Mux2~0_combout $end
+$var wire 1 [! DECIMAL_7SEG_1|proces[2]~3_combout $end
+$var wire 1 \! DECIMAL_7SEG_1|Mux6~0_combout $end
+$var wire 1 ]! DECIMAL_7SEG_1|Mux5~0_combout $end
+$var wire 1 ^! DECIMAL_7SEG_1|Mux4~0_combout $end
+$var wire 1 _! DECIMAL_7SEG_1|Mux3~0_combout $end
+$var wire 1 `! DECIMAL_7SEG_1|Mux2~0_combout $end
+$var wire 1 a! DECIMAL_7SEG_1|Mux1~0_combout $end
+$var wire 1 b! DECIMAL_7SEG_1|Mux0~0_combout $end
+$var wire 1 c! CONVERT_BINARY_TO_DECIMAL|signal_unidades[1]~0_combout $end
+$var wire 1 d! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry[1]~20_combout $end
+$var wire 1 e! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry~14_combout $end
+$var wire 1 f! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry[3]~15_combout $end
+$var wire 1 g! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry~16_combout $end
+$var wire 1 h! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry~21_combout $end
+$var wire 1 i! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry~12_combout $end
+$var wire 1 j! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry[4]~13_combout $end
+$var wire 1 k! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry[5]~22_combout $end
+$var wire 1 l! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry[6]~17_combout $end
+$var wire 1 m! COMPLEMENT_A2_8BTIS|num_neg[7]~7_combout $end
+$var wire 1 n! CONVERT_BINARY_TO_DECIMAL|DET_DECENAS|Mux0~0_combout $end
+$var wire 1 o! COMPLEMENT_A2_8BTIS|num_neg[1]~1_combout $end
+$var wire 1 p! CONVERT_BINARY_TO_DECIMAL|DET_DECENAS|Mux0~1_combout $end
+$var wire 1 q! DECIMAL_7SEG_2|proces[3]~8_combout $end
+$var wire 1 r! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry~18_combout $end
+$var wire 1 s! CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry[2]~19_combout $end
+$var wire 1 t! CONVERT_BINARY_TO_DECIMAL|DET_DECENAS|Mux1~1_combout $end
+$var wire 1 u! DECIMAL_7SEG_2|proces[2]~9_combout $end
+$var wire 1 v! DECIMAL_7SEG_2|proces[2]~10_combout $end
+$var wire 1 w! DECIMAL_7SEG_2|proces[1]~7_combout $end
+$var wire 1 x! CONVERT_BINARY_TO_DECIMAL|BIT_FUNDAMENTALES|Mux3~0_combout $end
+$var wire 1 y! DECIMAL_7SEG_2|proces[0]~1_combout $end
+$var wire 1 z! DECIMAL_7SEG_2|proces[0]~2_combout $end
+$var wire 1 {! DECIMAL_7SEG_2|proces[0]~4_combout $end
+$var wire 1 |! DECIMAL_7SEG_2|Mux6~0_combout $end
+$var wire 1 }! DECIMAL_7SEG_2|Mux5~0_combout $end
+$var wire 1 ~! DECIMAL_7SEG_2|Mux4~0_combout $end
+$var wire 1 !" DECIMAL_7SEG_2|Mux3~0_combout $end
+$var wire 1 "" DECIMAL_7SEG_2|Mux2~0_combout $end
+$var wire 1 #" DECIMAL_7SEG_2|Mux1~0_combout $end
+$var wire 1 $" DECIMAL_7SEG_2|Mux0~0_combout $end
+$var wire 1 %" DECIMAL_7SEG_3|proces[0]~0_combout $end
+$var wire 1 &" DECIMAL_7SEG_3|proces[2]~1_combout $end
+$var wire 1 '" DECIMAL_7SEG_3|proces[3]~2_combout $end
+$var wire 1 (" DECIMAL_7SEG_3|Mux2~0_combout $end
+$var wire 1 )" DECIMAL_7SEG_3|Mux6~0_combout $end
+$var wire 1 *" DECIMAL_7SEG_3|Mux5~0_combout $end
+$var wire 1 +" DECIMAL_7SEG_3|Mux4~0_combout $end
+$var wire 1 ," DECIMAL_7SEG_3|Mux3~0_combout $end
+$var wire 1 -" DECIMAL_7SEG_3|Mux2~1_combout $end
+$var wire 1 ." DECIMAL_7SEG_3|Mux1~0_combout $end
+$var wire 1 /" DECIMAL_7SEG_3|Mux0~0_combout $end
+$var wire 1 0" DECIMAL_7SEG_4|proces[2]~1_combout $end
+$var wire 1 1" DECIMAL_7SEG_4|Mux2~0_combout $end
+$var wire 1 2" DECIMAL_7SEG_4|proces[3]~2_combout $end
+$var wire 1 3" DECIMAL_7SEG_4|proces[0]~0_combout $end
+$var wire 1 4" DECIMAL_7SEG_4|Mux6~0_combout $end
+$var wire 1 5" DECIMAL_7SEG_4|Mux5~0_combout $end
+$var wire 1 6" DECIMAL_7SEG_4|Mux4~0_combout $end
+$var wire 1 7" DECIMAL_7SEG_4|Mux3~0_combout $end
+$var wire 1 8" DECIMAL_7SEG_4|Mux2~1_combout $end
+$var wire 1 9" DECIMAL_7SEG_4|Mux1~0_combout $end
+$var wire 1 :" DECIMAL_7SEG_4|Mux0~0_combout $end
+$var wire 1 ;" SUM_AND_2_3|carry [7] $end
+$var wire 1 <" SUM_AND_2_3|carry [6] $end
+$var wire 1 =" SUM_AND_2_3|carry [5] $end
+$var wire 1 >" SUM_AND_2_3|carry [4] $end
+$var wire 1 ?" SUM_AND_2_3|carry [3] $end
+$var wire 1 @" SUM_AND_2_3|carry [2] $end
+$var wire 1 A" SUM_AND_2_3|carry [1] $end
+$var wire 1 B" SUM_AND_2_3|carry [0] $end
+$var wire 1 C" SUM_END|carry [7] $end
+$var wire 1 D" SUM_END|carry [6] $end
+$var wire 1 E" SUM_END|carry [5] $end
+$var wire 1 F" SUM_END|carry [4] $end
+$var wire 1 G" SUM_END|carry [3] $end
+$var wire 1 H" SUM_END|carry [2] $end
+$var wire 1 I" SUM_END|carry [1] $end
+$var wire 1 J" SUM_END|carry [0] $end
+$var wire 1 K" SUM_END|result [7] $end
+$var wire 1 L" SUM_END|result [6] $end
+$var wire 1 M" SUM_END|result [5] $end
+$var wire 1 N" SUM_END|result [4] $end
+$var wire 1 O" SUM_END|result [3] $end
+$var wire 1 P" SUM_END|result [2] $end
+$var wire 1 Q" SUM_END|result [1] $end
+$var wire 1 R" SUM_END|result [0] $end
+$var wire 1 S" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|num_2_neg [7] $end
+$var wire 1 T" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|num_2_neg [6] $end
+$var wire 1 U" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|num_2_neg [5] $end
+$var wire 1 V" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|num_2_neg [4] $end
+$var wire 1 W" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|num_2_neg [3] $end
+$var wire 1 X" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|num_2_neg [2] $end
+$var wire 1 Y" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|num_2_neg [1] $end
+$var wire 1 Z" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|num_2_neg [0] $end
+$var wire 1 [" CONVERT_BINARY_TO_DECIMAL|SUM_BLOCK|result [3] $end
+$var wire 1 \" CONVERT_BINARY_TO_DECIMAL|SUM_BLOCK|result [2] $end
+$var wire 1 ]" CONVERT_BINARY_TO_DECIMAL|SUM_BLOCK|result [1] $end
+$var wire 1 ^" CONVERT_BINARY_TO_DECIMAL|SUM_BLOCK|result [0] $end
+$var wire 1 _" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|result [7] $end
+$var wire 1 `" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|result [6] $end
+$var wire 1 a" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|result [5] $end
+$var wire 1 b" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|result [4] $end
+$var wire 1 c" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|result [3] $end
+$var wire 1 d" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|result [2] $end
+$var wire 1 e" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|result [1] $end
+$var wire 1 f" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|result [0] $end
+$var wire 1 g" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry_sum [6] $end
+$var wire 1 h" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry_sum [5] $end
+$var wire 1 i" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry_sum [4] $end
+$var wire 1 j" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry_sum [3] $end
+$var wire 1 k" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry_sum [2] $end
+$var wire 1 l" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry_sum [1] $end
+$var wire 1 m" CONVERT_BINARY_TO_DECIMAL|DECENAS_A_UNIDADES|carry_sum [0] $end
+$var wire 1 n" COMPLEMENT_A2_8BTIS|carry_sum [5] $end
+$var wire 1 o" COMPLEMENT_A2_8BTIS|carry_sum [4] $end
+$var wire 1 p" COMPLEMENT_A2_8BTIS|carry_sum [3] $end
+$var wire 1 q" COMPLEMENT_A2_8BTIS|carry_sum [2] $end
+$var wire 1 r" COMPLEMENT_A2_8BTIS|carry_sum [1] $end
+$var wire 1 s" COMPLEMENT_A2_8BTIS|carry_sum [0] $end
+$var wire 1 t" SUM_AND_0_1|carry [7] $end
+$var wire 1 u" SUM_AND_0_1|carry [6] $end
+$var wire 1 v" SUM_AND_0_1|carry [5] $end
+$var wire 1 w" SUM_AND_0_1|carry [4] $end
+$var wire 1 x" SUM_AND_0_1|carry [3] $end
+$var wire 1 y" SUM_AND_0_1|carry [2] $end
+$var wire 1 z" SUM_AND_0_1|carry [1] $end
+$var wire 1 {" SUM_AND_0_1|carry [0] $end
+$var wire 1 |" SUM_AND_0_1|result [7] $end
+$var wire 1 }" SUM_AND_0_1|result [6] $end
+$var wire 1 ~" SUM_AND_0_1|result [5] $end
+$var wire 1 !# SUM_AND_0_1|result [4] $end
+$var wire 1 "# SUM_AND_0_1|result [3] $end
+$var wire 1 ## SUM_AND_0_1|result [2] $end
+$var wire 1 $# SUM_AND_0_1|result [1] $end
+$var wire 1 %# SUM_AND_0_1|result [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0#
+0$
+0+
+0*
+0)
+0(
+0'
+0&
+1%
+02
+01
+00
+0/
+0.
+0-
+1,
+09
+08
+07
+06
+05
+04
+13
+0@
+0?
+0>
+0=
+0<
+0;
+1:
+xA
+0B
+1C
+xD
+1E
+1F
+1G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+1[
+0\
+0]
+0^
+0_
+0`
+0a
+1b
+0c
+0d
+0e
+0f
+0g
+0h
+1i
+0j
+0k
+0l
+0m
+0n
+0o
+1p
+0q
+0r
+0s
+0t
+0u
+0v
+1w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+1!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+0`!
+0a!
+0b!
+1c!
+0d!
+0e!
+0f!
+0g!
+0h!
+0i!
+0j!
+0k!
+0l!
+0m!
+0n!
+0o!
+0p!
+0q!
+0r!
+0s!
+0t!
+0u!
+0v!
+0w!
+0x!
+0y!
+0z!
+0{!
+0|!
+0}!
+0~!
+0!"
+0""
+0#"
+0$"
+0%"
+0&"
+0'"
+1("
+0)"
+0*"
+0+"
+0,"
+0-"
+0."
+0/"
+00"
+11"
+02"
+03"
+04"
+05"
+06"
+07"
+08"
+09"
+0:"
+zB"
+zA"
+z@"
+0?"
+z>"
+z="
+0<"
+z;"
+0J"
+zI"
+zH"
+zG"
+zF"
+zE"
+0D"
+zC"
+zR"
+zQ"
+zP"
+zO"
+zN"
+zM"
+zL"
+0K"
+zZ"
+zY"
+0X"
+0W"
+zV"
+zU"
+zT"
+zS"
+0^"
+0]"
+0\"
+0["
+zf"
+0e"
+0d"
+0c"
+0b"
+0a"
+0`"
+0_"
+zm"
+zl"
+0k"
+zj"
+zi"
+zh"
+zg"
+zs"
+0r"
+zq"
+0p"
+0o"
+zn"
+z{"
+0z"
+zy"
+zx"
+0w"
+zv"
+zu"
+zt"
+z%#
+z$#
+z##
+0"#
+z!#
+z~"
+z}"
+z|"
+$end
+#20000
+b1000 !
+b1001 !
+b100 "
+1#
+1$
+1r
+1x
+1t
+1y
+1~
+0A
+12"
+1&"
+1;!
+16!
+0!!
+1N
+13"
+1Y!
+1F!
+1>!
+1K
+18"
+1:"
+1/"
+1<!
+1k"
+1W"
+1d!
+1X"
+1G!
+1L
+1n
+1<
+1-"
+1,"
+1)"
+1a!
+1`!
+1_!
+1\!
+1I
+1`"
+1a"
+1_"
+1b"
+1f!
+1s!
+1R!
+0p
+0i
+1g
+1f
+1c
+1Z
+1Y
+1X
+1U
+0:
+03
+15
+16
+19
+1&
+1'
+1(
+1+
+1H!
+1R
+1j!
+0b"
+1c"
+1\"
+1e!
+1d"
+0R!
+1P!
+0a"
+1k!
+1i!
+1t!
+0R
+1W!
+0t!
+0\"
+1Q!
+0`"
+1l!
+0W"
+1X!
+0W!
+1^"
+0_"
+0c"
+1b!
+0a!
+0_!
+0\!
+1W"
+0X!
+1x!
+0[
+0Z
+0X
+0U
+0%
+0&
+0(
+0+
+1c"
+0b!
+1y!
+1e"
+0c!
+1V!
+1a!
+1_!
+1\!
+1b!
+1[
+1Z
+1X
+1U
+1%
+1&
+1(
+1+
+0_!
+0\!
+0[
+0X
+0U
+0%
+0(
+0+
+#450000
+b1 !
+b0 !
+b0 "
+0r
+0x
+0t
+1A
+02"
+0&"
+0;!
+06!
+0N
+03"
+0Y!
+0F!
+0>!
+0K
+08"
+0:"
+0/"
+0<!
+0d!
+0G!
+0L
+0n
+0<
+0-"
+0,"
+0)"
+0`!
+1^!
+0I
+0d"
+0c"
+0i!
+1S!
+0P!
+1p
+1i
+0g
+0f
+0c
+0Y
+1W
+1:
+13
+05
+06
+09
+0'
+1)
+0H!
+1R
+1]"
+0Q!
+0s!
+0e!
+1d"
+0S!
+0x!
+1U!
+0^"
+1c"
+0f!
+1T
+0]"
+0X"
+1[!
+1Z!
+0U!
+0T
+0R
+0j!
+1b"
+0Z!
+0d"
+1X"
+0y!
+0e"
+1c!
+0V!
+0a!
+0^!
+1]!
+1S
+1a"
+0k!
+1R
+0k"
+0W"
+0X"
+0[!
+1d"
+0Z
+0W
+1V
+0&
+0)
+1*
+1`!
+1_!
+0]!
+1\!
+1w!
+0R
+0l!
+0S
+0a"
+1_"
+0b"
+0c"
+0d"
+0b!
+1t!
+1P
+1Y
+1X
+0V
+1U
+1'
+1(
+0*
+1+
+0`!
+0_!
+0\!
+1$"
+0_"
+0w!
+0t!
+0P
+1[
+0Y
+0X
+0U
+1%
+0'
+0(
+0+
+1#"
+1~!
+0$"
+0b
+1a
+1^
+0,
+1-
+10
+0#"
+0~!
+1b
+0a
+0^
+1,
+0-
+00
+#460000
+0#
+0$
+0y
+0~
+0A
+1!!
+#1000000

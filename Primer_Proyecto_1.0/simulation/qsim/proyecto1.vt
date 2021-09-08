@@ -1,0 +1,773 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "09/03/2021 23:16:24"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    proyecto1
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module proyecto1_vlg_sample_tst(
+	num_1,
+	num_2,
+	select_mult,
+	select_sum,
+	sampler_tx
+);
+input [3:0] num_1;
+input [3:0] num_2;
+input  select_mult;
+input  select_sum;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(num_1 or num_2 or select_mult or select_sum)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module proyecto1_vlg_check_tst (
+	segmento1,
+	segmento2,
+	segmento3,
+	segmento4,
+	sampler_rx
+);
+input [6:0] segmento1;
+input [6:0] segmento2;
+input [6:0] segmento3;
+input [6:0] segmento4;
+input sampler_rx;
+
+reg [6:0] segmento1_expected;
+reg [6:0] segmento2_expected;
+reg [6:0] segmento3_expected;
+reg [6:0] segmento4_expected;
+
+reg [6:0] segmento1_prev;
+reg [6:0] segmento2_prev;
+reg [6:0] segmento3_prev;
+reg [6:0] segmento4_prev;
+
+reg [6:0] segmento1_expected_prev;
+reg [6:0] segmento2_expected_prev;
+reg [6:0] segmento3_expected_prev;
+reg [6:0] segmento4_expected_prev;
+
+reg [6:0] last_segmento1_exp;
+reg [6:0] last_segmento2_exp;
+reg [6:0] last_segmento3_exp;
+reg [6:0] last_segmento4_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	segmento1_prev = segmento1;
+	segmento2_prev = segmento2;
+	segmento3_prev = segmento3;
+	segmento4_prev = segmento4;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	segmento1_expected_prev = segmento1_expected;
+	segmento2_expected_prev = segmento2_expected;
+	segmento3_expected_prev = segmento3_expected;
+	segmento4_expected_prev = segmento4_expected;
+end
+
+
+// expected segmento1[ 6 ]
+initial
+begin
+	segmento1_expected[6] = 1'bX;
+end 
+// expected segmento1[ 5 ]
+initial
+begin
+	segmento1_expected[5] = 1'bX;
+end 
+// expected segmento1[ 4 ]
+initial
+begin
+	segmento1_expected[4] = 1'bX;
+end 
+// expected segmento1[ 3 ]
+initial
+begin
+	segmento1_expected[3] = 1'bX;
+end 
+// expected segmento1[ 2 ]
+initial
+begin
+	segmento1_expected[2] = 1'bX;
+end 
+// expected segmento1[ 1 ]
+initial
+begin
+	segmento1_expected[1] = 1'bX;
+end 
+// expected segmento1[ 0 ]
+initial
+begin
+	segmento1_expected[0] = 1'bX;
+end 
+// expected segmento2[ 6 ]
+initial
+begin
+	segmento2_expected[6] = 1'bX;
+end 
+// expected segmento2[ 5 ]
+initial
+begin
+	segmento2_expected[5] = 1'bX;
+end 
+// expected segmento2[ 4 ]
+initial
+begin
+	segmento2_expected[4] = 1'bX;
+end 
+// expected segmento2[ 3 ]
+initial
+begin
+	segmento2_expected[3] = 1'bX;
+end 
+// expected segmento2[ 2 ]
+initial
+begin
+	segmento2_expected[2] = 1'bX;
+end 
+// expected segmento2[ 1 ]
+initial
+begin
+	segmento2_expected[1] = 1'bX;
+end 
+// expected segmento2[ 0 ]
+initial
+begin
+	segmento2_expected[0] = 1'bX;
+end 
+// expected segmento3[ 6 ]
+initial
+begin
+	segmento3_expected[6] = 1'bX;
+end 
+// expected segmento3[ 5 ]
+initial
+begin
+	segmento3_expected[5] = 1'bX;
+end 
+// expected segmento3[ 4 ]
+initial
+begin
+	segmento3_expected[4] = 1'bX;
+end 
+// expected segmento3[ 3 ]
+initial
+begin
+	segmento3_expected[3] = 1'bX;
+end 
+// expected segmento3[ 2 ]
+initial
+begin
+	segmento3_expected[2] = 1'bX;
+end 
+// expected segmento3[ 1 ]
+initial
+begin
+	segmento3_expected[1] = 1'bX;
+end 
+// expected segmento3[ 0 ]
+initial
+begin
+	segmento3_expected[0] = 1'bX;
+end 
+// expected segmento4[ 6 ]
+initial
+begin
+	segmento4_expected[6] = 1'bX;
+end 
+// expected segmento4[ 5 ]
+initial
+begin
+	segmento4_expected[5] = 1'bX;
+end 
+// expected segmento4[ 4 ]
+initial
+begin
+	segmento4_expected[4] = 1'bX;
+end 
+// expected segmento4[ 3 ]
+initial
+begin
+	segmento4_expected[3] = 1'bX;
+end 
+// expected segmento4[ 2 ]
+initial
+begin
+	segmento4_expected[2] = 1'bX;
+end 
+// expected segmento4[ 1 ]
+initial
+begin
+	segmento4_expected[1] = 1'bX;
+end 
+// expected segmento4[ 0 ]
+initial
+begin
+	segmento4_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(segmento1_expected or segmento1 or segmento2_expected or segmento2 or segmento3_expected or segmento3 or segmento4_expected or segmento4)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected segmento1 = %b | expected segmento2 = %b | expected segmento3 = %b | expected segmento4 = %b | ",segmento1_expected_prev,segmento2_expected_prev,segmento3_expected_prev,segmento4_expected_prev);
+	$display("| real segmento1 = %b | real segmento2 = %b | real segmento3 = %b | real segmento4 = %b | ",segmento1_prev,segmento2_prev,segmento3_prev,segmento4_prev);
+`endif
+	if (
+		( segmento1_expected_prev[0] !== 1'bx ) && ( segmento1_prev[0] !== segmento1_expected_prev[0] )
+		&& ((segmento1_expected_prev[0] !== last_segmento1_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento1_expected_prev);
+		$display ("     Real value = %b", segmento1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_segmento1_exp[0] = segmento1_expected_prev[0];
+	end
+	if (
+		( segmento1_expected_prev[1] !== 1'bx ) && ( segmento1_prev[1] !== segmento1_expected_prev[1] )
+		&& ((segmento1_expected_prev[1] !== last_segmento1_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento1_expected_prev);
+		$display ("     Real value = %b", segmento1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_segmento1_exp[1] = segmento1_expected_prev[1];
+	end
+	if (
+		( segmento1_expected_prev[2] !== 1'bx ) && ( segmento1_prev[2] !== segmento1_expected_prev[2] )
+		&& ((segmento1_expected_prev[2] !== last_segmento1_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento1_expected_prev);
+		$display ("     Real value = %b", segmento1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_segmento1_exp[2] = segmento1_expected_prev[2];
+	end
+	if (
+		( segmento1_expected_prev[3] !== 1'bx ) && ( segmento1_prev[3] !== segmento1_expected_prev[3] )
+		&& ((segmento1_expected_prev[3] !== last_segmento1_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento1_expected_prev);
+		$display ("     Real value = %b", segmento1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_segmento1_exp[3] = segmento1_expected_prev[3];
+	end
+	if (
+		( segmento1_expected_prev[4] !== 1'bx ) && ( segmento1_prev[4] !== segmento1_expected_prev[4] )
+		&& ((segmento1_expected_prev[4] !== last_segmento1_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento1_expected_prev);
+		$display ("     Real value = %b", segmento1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_segmento1_exp[4] = segmento1_expected_prev[4];
+	end
+	if (
+		( segmento1_expected_prev[5] !== 1'bx ) && ( segmento1_prev[5] !== segmento1_expected_prev[5] )
+		&& ((segmento1_expected_prev[5] !== last_segmento1_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento1[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento1_expected_prev);
+		$display ("     Real value = %b", segmento1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_segmento1_exp[5] = segmento1_expected_prev[5];
+	end
+	if (
+		( segmento1_expected_prev[6] !== 1'bx ) && ( segmento1_prev[6] !== segmento1_expected_prev[6] )
+		&& ((segmento1_expected_prev[6] !== last_segmento1_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento1[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento1_expected_prev);
+		$display ("     Real value = %b", segmento1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_segmento1_exp[6] = segmento1_expected_prev[6];
+	end
+	if (
+		( segmento2_expected_prev[0] !== 1'bx ) && ( segmento2_prev[0] !== segmento2_expected_prev[0] )
+		&& ((segmento2_expected_prev[0] !== last_segmento2_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento2_expected_prev);
+		$display ("     Real value = %b", segmento2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_segmento2_exp[0] = segmento2_expected_prev[0];
+	end
+	if (
+		( segmento2_expected_prev[1] !== 1'bx ) && ( segmento2_prev[1] !== segmento2_expected_prev[1] )
+		&& ((segmento2_expected_prev[1] !== last_segmento2_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento2_expected_prev);
+		$display ("     Real value = %b", segmento2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_segmento2_exp[1] = segmento2_expected_prev[1];
+	end
+	if (
+		( segmento2_expected_prev[2] !== 1'bx ) && ( segmento2_prev[2] !== segmento2_expected_prev[2] )
+		&& ((segmento2_expected_prev[2] !== last_segmento2_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento2_expected_prev);
+		$display ("     Real value = %b", segmento2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_segmento2_exp[2] = segmento2_expected_prev[2];
+	end
+	if (
+		( segmento2_expected_prev[3] !== 1'bx ) && ( segmento2_prev[3] !== segmento2_expected_prev[3] )
+		&& ((segmento2_expected_prev[3] !== last_segmento2_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento2_expected_prev);
+		$display ("     Real value = %b", segmento2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_segmento2_exp[3] = segmento2_expected_prev[3];
+	end
+	if (
+		( segmento2_expected_prev[4] !== 1'bx ) && ( segmento2_prev[4] !== segmento2_expected_prev[4] )
+		&& ((segmento2_expected_prev[4] !== last_segmento2_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento2_expected_prev);
+		$display ("     Real value = %b", segmento2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_segmento2_exp[4] = segmento2_expected_prev[4];
+	end
+	if (
+		( segmento2_expected_prev[5] !== 1'bx ) && ( segmento2_prev[5] !== segmento2_expected_prev[5] )
+		&& ((segmento2_expected_prev[5] !== last_segmento2_exp[5]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento2[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento2_expected_prev);
+		$display ("     Real value = %b", segmento2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_segmento2_exp[5] = segmento2_expected_prev[5];
+	end
+	if (
+		( segmento2_expected_prev[6] !== 1'bx ) && ( segmento2_prev[6] !== segmento2_expected_prev[6] )
+		&& ((segmento2_expected_prev[6] !== last_segmento2_exp[6]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento2[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento2_expected_prev);
+		$display ("     Real value = %b", segmento2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_segmento2_exp[6] = segmento2_expected_prev[6];
+	end
+	if (
+		( segmento3_expected_prev[0] !== 1'bx ) && ( segmento3_prev[0] !== segmento3_expected_prev[0] )
+		&& ((segmento3_expected_prev[0] !== last_segmento3_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento3[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento3_expected_prev);
+		$display ("     Real value = %b", segmento3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_segmento3_exp[0] = segmento3_expected_prev[0];
+	end
+	if (
+		( segmento3_expected_prev[1] !== 1'bx ) && ( segmento3_prev[1] !== segmento3_expected_prev[1] )
+		&& ((segmento3_expected_prev[1] !== last_segmento3_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento3[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento3_expected_prev);
+		$display ("     Real value = %b", segmento3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_segmento3_exp[1] = segmento3_expected_prev[1];
+	end
+	if (
+		( segmento3_expected_prev[2] !== 1'bx ) && ( segmento3_prev[2] !== segmento3_expected_prev[2] )
+		&& ((segmento3_expected_prev[2] !== last_segmento3_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento3[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento3_expected_prev);
+		$display ("     Real value = %b", segmento3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_segmento3_exp[2] = segmento3_expected_prev[2];
+	end
+	if (
+		( segmento3_expected_prev[3] !== 1'bx ) && ( segmento3_prev[3] !== segmento3_expected_prev[3] )
+		&& ((segmento3_expected_prev[3] !== last_segmento3_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento3[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento3_expected_prev);
+		$display ("     Real value = %b", segmento3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_segmento3_exp[3] = segmento3_expected_prev[3];
+	end
+	if (
+		( segmento3_expected_prev[4] !== 1'bx ) && ( segmento3_prev[4] !== segmento3_expected_prev[4] )
+		&& ((segmento3_expected_prev[4] !== last_segmento3_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento3[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento3_expected_prev);
+		$display ("     Real value = %b", segmento3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_segmento3_exp[4] = segmento3_expected_prev[4];
+	end
+	if (
+		( segmento3_expected_prev[5] !== 1'bx ) && ( segmento3_prev[5] !== segmento3_expected_prev[5] )
+		&& ((segmento3_expected_prev[5] !== last_segmento3_exp[5]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento3[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento3_expected_prev);
+		$display ("     Real value = %b", segmento3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_segmento3_exp[5] = segmento3_expected_prev[5];
+	end
+	if (
+		( segmento3_expected_prev[6] !== 1'bx ) && ( segmento3_prev[6] !== segmento3_expected_prev[6] )
+		&& ((segmento3_expected_prev[6] !== last_segmento3_exp[6]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento3[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento3_expected_prev);
+		$display ("     Real value = %b", segmento3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_segmento3_exp[6] = segmento3_expected_prev[6];
+	end
+	if (
+		( segmento4_expected_prev[0] !== 1'bx ) && ( segmento4_prev[0] !== segmento4_expected_prev[0] )
+		&& ((segmento4_expected_prev[0] !== last_segmento4_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento4[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento4_expected_prev);
+		$display ("     Real value = %b", segmento4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_segmento4_exp[0] = segmento4_expected_prev[0];
+	end
+	if (
+		( segmento4_expected_prev[1] !== 1'bx ) && ( segmento4_prev[1] !== segmento4_expected_prev[1] )
+		&& ((segmento4_expected_prev[1] !== last_segmento4_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento4[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento4_expected_prev);
+		$display ("     Real value = %b", segmento4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_segmento4_exp[1] = segmento4_expected_prev[1];
+	end
+	if (
+		( segmento4_expected_prev[2] !== 1'bx ) && ( segmento4_prev[2] !== segmento4_expected_prev[2] )
+		&& ((segmento4_expected_prev[2] !== last_segmento4_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento4[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento4_expected_prev);
+		$display ("     Real value = %b", segmento4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_segmento4_exp[2] = segmento4_expected_prev[2];
+	end
+	if (
+		( segmento4_expected_prev[3] !== 1'bx ) && ( segmento4_prev[3] !== segmento4_expected_prev[3] )
+		&& ((segmento4_expected_prev[3] !== last_segmento4_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento4[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento4_expected_prev);
+		$display ("     Real value = %b", segmento4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_segmento4_exp[3] = segmento4_expected_prev[3];
+	end
+	if (
+		( segmento4_expected_prev[4] !== 1'bx ) && ( segmento4_prev[4] !== segmento4_expected_prev[4] )
+		&& ((segmento4_expected_prev[4] !== last_segmento4_exp[4]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento4[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento4_expected_prev);
+		$display ("     Real value = %b", segmento4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_segmento4_exp[4] = segmento4_expected_prev[4];
+	end
+	if (
+		( segmento4_expected_prev[5] !== 1'bx ) && ( segmento4_prev[5] !== segmento4_expected_prev[5] )
+		&& ((segmento4_expected_prev[5] !== last_segmento4_exp[5]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento4[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento4_expected_prev);
+		$display ("     Real value = %b", segmento4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_segmento4_exp[5] = segmento4_expected_prev[5];
+	end
+	if (
+		( segmento4_expected_prev[6] !== 1'bx ) && ( segmento4_prev[6] !== segmento4_expected_prev[6] )
+		&& ((segmento4_expected_prev[6] !== last_segmento4_exp[6]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segmento4[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segmento4_expected_prev);
+		$display ("     Real value = %b", segmento4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_segmento4_exp[6] = segmento4_expected_prev[6];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module proyecto1_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [3:0] num_1;
+reg [3:0] num_2;
+reg select_mult;
+reg select_sum;
+// wires                                               
+wire [6:0] segmento1;
+wire [6:0] segmento2;
+wire [6:0] segmento3;
+wire [6:0] segmento4;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+proyecto1 i1 (
+// port map - connection between master ports and signals/registers   
+	.num_1(num_1),
+	.num_2(num_2),
+	.segmento1(segmento1),
+	.segmento2(segmento2),
+	.segmento3(segmento3),
+	.segmento4(segmento4),
+	.select_mult(select_mult),
+	.select_sum(select_sum)
+);
+// num_1[ 3 ]
+initial
+begin
+	num_1[3] = 1'b0;
+	num_1[3] = #20000 1'b1;
+	num_1[3] = #430000 1'b0;
+end 
+// num_1[ 2 ]
+initial
+begin
+	num_1[2] = 1'b0;
+end 
+// num_1[ 1 ]
+initial
+begin
+	num_1[1] = 1'b0;
+end 
+// num_1[ 0 ]
+initial
+begin
+	num_1[0] = 1'b0;
+	num_1[0] = #20000 1'b1;
+	num_1[0] = #430000 1'b0;
+end 
+// num_2[ 3 ]
+initial
+begin
+	num_2[3] = 1'b0;
+end 
+// num_2[ 2 ]
+initial
+begin
+	num_2[2] = 1'b0;
+	num_2[2] = #20000 1'b1;
+	num_2[2] = #430000 1'b0;
+end 
+// num_2[ 1 ]
+initial
+begin
+	num_2[1] = 1'b0;
+end 
+// num_2[ 0 ]
+initial
+begin
+	num_2[0] = 1'b0;
+end 
+
+// select_mult
+initial
+begin
+	select_mult = 1'b0;
+	select_mult = #20000 1'b1;
+	select_mult = #440000 1'b0;
+end 
+
+// select_sum
+initial
+begin
+	select_sum = 1'b0;
+	select_sum = #20000 1'b1;
+	select_sum = #440000 1'b0;
+end 
+
+proyecto1_vlg_sample_tst tb_sample (
+	.num_1(num_1),
+	.num_2(num_2),
+	.select_mult(select_mult),
+	.select_sum(select_sum),
+	.sampler_tx(sampler)
+);
+
+proyecto1_vlg_check_tst tb_out(
+	.segmento1(segmento1),
+	.segmento2(segmento2),
+	.segmento3(segmento3),
+	.segmento4(segmento4),
+	.sampler_rx(sampler)
+);
+endmodule
+

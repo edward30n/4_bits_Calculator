@@ -1,0 +1,17 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+----------------------------------
+ENTITY BINARY_TO_DECIMAL IS
+	PORT(
+	num	:	IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+	unidades : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	decenas : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+	);
+END ENTITY BINARY_TO_DECIMAL;
+----------------------------------
+ARCHITECTURE gateLevel OF BINARY_TO_DECIMAL IS
+----------------------------------
+BEGIN 
+	FUNDAMENTAL_BIT_1_TO_3 : ENTITY work.FUNDAMENTAL_BIT
+	PORT MAP();
+END gateLevel;
